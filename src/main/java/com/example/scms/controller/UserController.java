@@ -65,7 +65,7 @@ public class UserController {
 		return new ResponseEntity<String>("User Logged Out Successfully", HttpStatus.OK);
 	}
 	
-	@GetMapping("/admin/	")
+	@GetMapping("/admin/getCustomersToApprove")
 	public ResponseEntity<?> getCustomersToApprove(HttpSession session){
 		User user = (User) session.getAttribute("user");
 		if(user!=null && user.getUserRole().equals("admin"))
